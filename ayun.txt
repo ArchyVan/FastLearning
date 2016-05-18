@@ -1,2 +1,3 @@
 This is my first file.
 Hello!How do you do?
+练习完git后删除本文件
