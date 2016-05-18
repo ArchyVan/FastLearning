@@ -1,0 +1,54 @@
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git init 初始化
+git add <file> 添加文件
+git commit 提交到stage
+git revert commit_id 撤销该commit并作为一个新的commit
+git status 查看当前工作状态
+git diff <file>查看不同/修改内容
+git diff HEAD -- <file> 查看工作区与版本库之间的区别
+git log 查看提交日志
+git log --pretty=oneline
+git log --graph
+git reset --hard commit_id 版本回退
+git reflog 查看命令历史
+git checkout -- <file> 撤销修改
+git reset HEAD file 从暂存区修改撤销(unstage)
+git rm <file> 从版本库中删除该文件
+PS: ssh-keygen -t rsa -C "youremail@example.com"
+git remote add origin git@github.com:yourname/projectname.git 将已有的本地库与远程库关联
+git push -u origin master 将本地库内容推送到远程库并形成关联
+git push origin master 推送本地修改内容
+git clone git@github.com:name/projectname.git 克隆远程库
+git branch 查看分支
+git branch <name> 创建分支
+git branch -a 查看远程分支
+git checkout <name> 切换分支
+git checkout -b <name> 创建并切换分支
+git merge <name> 合并某分支到当前分支
+git branch -d <name> 删除分支
+git branch -D <name> 忽略修改强制删除分支
+git merge --no-ff -m "message" <name> 标准分支合并语句
+git stash 保存工作现场
+git stash pop 回到工作现场
+git stash list 保存记录
+git stash apply stash@{number} 回到相应工作现场
+git remote -v 查看远程库信息
+git push origin branch-name 从本地推送分支
+git pull 抓取远程新提交
+git checkout -b branch-name origin/branch-name 在本地创建和远程分支对应的分支
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的关联
+git tag <name> 新建一个标签
+git tag -a <tagname> -m "message" commit_id 制定标签信息
+git tag -s <tagname> -m "message" commit_id 用PGP签名标签
+git tag 查看所有标签
+git show <tagname> 看到PGP签名信息
+git push origin <tagname> 推送一个本地标签
+git push origin --tags 推送全部未推送过的本地标签
+git tag -d <tagname> 可以删除一个本地标签
+git push origin :ref/tags/<tagname> 可以删除一个远程标签
+git config --global alias.XX command 给命令配置别名
+git push origin —-delete <branchName> 删除远程分支git push origin :<branchName>
+git push origin —-delete tag <tagName> 删除远程标签git push origin :refs/tags/<tagNaem>
+
+
