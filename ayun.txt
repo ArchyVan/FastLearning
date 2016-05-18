@@ -1,2 +1,2 @@
 This is my first file.
-Git 的一些快捷键 我放到Git CheatSheet.txt中了
+Hello!How do you do?
