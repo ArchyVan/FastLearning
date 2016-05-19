@@ -1,3 +1,7 @@
 This is my first file.
 Hello!How do you do?
+<<<<<<< HEAD
 How do you use git to manage your code?
+=======
+练习完git后删除本文件
+>>>>>>> b263b033806fe68f4277451fe64c4fc235b9676c
