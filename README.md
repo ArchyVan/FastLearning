@@ -1,5 +1,7 @@
 #Learning Route
+
 ![Learning Route](http://imgsrc.baidu.com/baike/pic/item/d8f9d72a6059252d83fed2a5349b033b5ab5b9a2.jpg)
+
 * Git
     * add、commit、push、remote、checkout 基础
     * revert、rm、reset、rebase、merge 进阶
