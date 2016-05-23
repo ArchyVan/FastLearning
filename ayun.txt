@@ -1,4 +1,0 @@
-This is my first file.
-Hello!How do you do?  I'm destorying your file. 
-HA HA HA.
-Git tracks changes of files.
