@@ -130,6 +130,11 @@ git branch —set-upstream dev origin/dev
 4>建立本地分支和远程分支的关联，使用git branch —set-upstream branch-name origin/branch-name;
 5>从远程抓取分支使用git pull；如果有冲突，先处理冲突。
 
+11、标签
+git中创建标签，首先切换到需要打标签的分支上，然后指令：git tag <name>就可以打一个新的标签。
+可以通过 git tag查看所有标签，默认的标签是打在最新提交的commit上得。
+如果想补全以前没有打的标签，可以通过找到历史提交的commit id，然后打上就可以了，查看历史commit id指令：git log —pretty=oneline —abbrev-commit;
+
 
 
 
