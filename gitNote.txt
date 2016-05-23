@@ -1,0 +1,136 @@
+1、GIt初级配置：
+git config命令：（应该在GIT使用之前配置的）专门用来配置或读取相应的工作环境变量。这些变量存放在以下三个不同的地方：
+/etc/gitconfig文件：系统中对所有用户都普遍适用的配置。若使用git config时用—system选项，读写的就是这个文件。
+~/.gitconfig文件：用户目录下的配置文件只适用于该用户。若使用git config时用—global选项，读写的就是该文件。
+	针对当前项目的Git目录中的配置文件（也就是工作目录中的.git/config文件）：这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上层的相同配置，所以.git/config里的配置会覆盖/etc/gitconfig中的同名变量。
+
+	配置用户信息：(每次用户提交时都会引用这两条信息，说明谁提交了更新，会随更新内容一起被永久纳入历史记录)
+git config —global user.name “ECHO2016”
+git config —global user.email 2050687105@qq.com
+使用了—global选项，则更改的配置文件就是位于你用户主目录下的那个，以后的项目都会默认使用这里配置的用户信息。如果要在某个特定的项目中使用其他名字或者电邮，只要去掉—global选项重新配置就ok，新的设定保存在当前的.git/config文件里。
+	查看配置信息：
+git config —list;
+查看某个变量：git config user.name;
+配置教程：https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE
+
+2、创建版本库
+mkdir newgit	//创建一个空目录
+cd newgit//跳转到指定目录
+pwd:用于显示当前目录
+git init//把该目录变成Git可以管理的仓库，会出现一个.git的目录，默认隐藏，使用ls -ah就可以看见
+注意：所有的版本控制系统，其实只能跟踪文本文件的改动，比如txt文件、网页、所有的程序代码等。不能跟踪word文件的改动。
+
+3、git add:把文件修改添加到暂存区(stage)；git commit：提交更改，就是把暂存区的所有内容提交到当前分支；
+当创建Git版本库时，Git自动创建了唯一一个master分支，默认的提交就是提交到master分支上。
+
+4、版本穿梭
+git log：显示从最近到最远的提交日志；
+在Git中，HEAD表示当前版本，每个版本都有自己的提交ID;
+git reset —hard commit_id:回退到上一个版本;
+穿梭前，用git log 查看提交历史，以便确定要回退到哪个版本。
+要重返未来，用git reflog 查看命令历史，以便确定要回到未来的哪个版本。
+
+5、管理与修改
+git diff HEAD — read.txt:可以查看工作区和版本库里面最新版本的区别。
+git checkout — read.txt:丢弃文件在工作区的修改（没有add/commit之前）
+	如果：git add到暂存区了，但是没有commit，使用git status查看状态，还没有提交，使用git reset HEAD file,可以把暂存区的修改撤掉，重新回到工作区；
+git reset ：既可以回退版本，也可以把暂存区的修改回退到工作区。当使用HEAD时，表示最新的版本；
+	如果：改错了东西，已经git add了，也已经git commit了，要使用版本回退；但是如果git push到远程仓库了，会很麻烦（不知道怎么解决）。
+
+6、删除文件
+rm file:在文件目录中删除文件；
+在Git中：
+a：确实要从版本库总删除该文件，那就使用git rm删掉，并且git commit；
+git rm file
+git commit -m “remove file”
+b:删错了：因为版本库里还有，所以可以把误删除的文件恢复到最新版本
+git checkout — file
+git checkout：其实是用版本库里的版本替换工作区的版本，无论是工作区还是删除，都可以“一键还原”。
+
+7、远程仓库（Git的杀手级功能）
+
+	创建SSH Key(在用户主目录下，查看有没有.ssh目录，再看看有没有id_rsa（私钥）和id_rsa.pub（公钥）文件。
+ssh-keygen -t rss -C “email.com”.
+把id_rsa.pub中的内容粘贴到github上，创建SSH Key。
+
+为什么github需要SSH？
+因为github需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，github只要知道了你的公钥，就可以确认只有你自己才能推送。另外github允许添加多个key，如果有多台电脑，只要把每台电脑的key都添加到github上，就可以在每台电脑上网github推送了。
+
+8、添加远程仓库（先有本地库，后有远程库的时候，如何关联远程库）
+在github.com创建完一个远程库之后，可以与本地仓库进行关联。
+要关联一个远程库，使用命令:
+git remote add origin git@github.com:username/repo-name.git
+
+关联后（记得添加文件到本地仓库里面），使用:
+git push -u origin master 第一次推送master分支的所有内容；
+以后每次本地提交后，可以使用:
+git push origin master，把本地master分支的最新修改推送到github。
+
+9、从远程库克隆（先建好远程库，然后从远程库克隆）
+
+在github上创建完毕一个库 gitskills 之后，在mac终端输入指令：
+git clone git@github.com:ECHO2016/gitskills.git,就可以克隆一个远程库到本地。
+
+10、分支管理
+	创建与合并分支
+Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支:git merge <name>
+删除分支：git branch -d <name>
+提交到远程仓库的某个分支：git push —set-upstream origin dev.
+用带参数的git log查看分支的合并情况(简略的合并图)：
+git log —graph —pretty=oneline —abbrev-commit;
+git log —graph：可以看到详细的合并图。
+
+分支管理策略：
+在实际开发中，有几个原则要知道：
+首先，master分支非常稳定，仅用来发布新版本，平时不能再上面干活；干活都在dev分支上，等到发布版本时，再把dev分支合并到master上，在master分支上发布版本；
+其次团队小伙伴之间每个人都在自己的dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就OK了。
+最后，合并分支时，加上—no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward模式合并就看不出来曾经做过的合并。
+合并带有—no-ff参数（普通模式）
+git merge —no-ff -m “merge with no-ff” dev.
+
+bug分支：
+	每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
+	git提供了stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+git stash
+查看刚才的工作现场使用：
+git stash list
+如果工作现场还在，git把stash内容存在某个地方了，但是需要恢复：
+git stash pop：恢复的同时把stash内容也删除了。
+小结：当手头工作没有完成时，先把工作现场git stash下，然后去修复bug，修复后，再git stash pop，回到工作现场。
+
+feature（功能）分支：
+	添加一个新功能时，你肯定不希望因为一些实验性质的代码把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支在上面开发，完成后合并，最后删除该feature分支。
+
+多人协作：
+	当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且远程仓库的默认名称是origin。
+要查看远程仓库信息，使用：git remote
+或者更详细的信息：git remote -v
+	推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样git就会把该分支推送到远程库对应的远程分支上：git push origin master/dev.
+哪些分支需要推送，哪些不需要？
+master分支是主分支，因此要时刻与远程同步；
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+bug分支只用于在本地修复bug，就没必要推送到远程了；
+feature分支是否推送到远程，取决于你是否和你的小伙伴在上面开发。
+
+抓取分支：
+	大家协作时，大家都会往master和dev分支上推送各自的修改。
+当推送失败，因为队友的最新提交和你试图推送的提交有冲突，解决办法也很简单，先用git pull把最新的提交从origin/dev抓下来，然后在本地合并，解决冲突完在推送。
+注意：如果git pull页失败了，原因是没有指定本地dev分支和远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：
+git branch —set-upstream dev origin/dev
+然后再git pull。
+小结：多人协作模式
+1>查看远程库信息，使用git remote -v；
+2>从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程库的新提交；
+3>在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+4>建立本地分支和远程分支的关联，使用git branch —set-upstream branch-name origin/branch-name;
+5>从远程抓取分支使用git pull；如果有冲突，先处理冲突。
+
+
+
+
+
