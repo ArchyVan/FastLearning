@@ -4,9 +4,6 @@
     * revert、rm、reset、rebase、merge 进阶
     * GitHub、客户端、常用流程
     * Git 内部原理、内容寻址介绍
-* UI（知名应用仿写)
-    * 下厨房
-    * CityGuides
 * Animation
     * LayerAnimation、ViewAnimation、Transition、Shape、Path 等基础
     * Pop 框架、贝塞尔曲线、数学与动画
@@ -50,6 +47,10 @@
     * Github Hooks、Travis CI
 * Full Stack & Silicon Valley
     * PHP 与 MySQL 后端开发
+    * Python 开发
     * HTML、CSS、Vue 前端
+*VR & DeepLearning
+    *虚拟技术
+    *计算视觉
+    *机器学习
     * LeanCloud 数据存储、实时通信
-    * 美国签证、硅谷IT行业见闻
