@@ -4,3 +4,4 @@
 ##学习网址：
 - [iOS 资源大全中文版](https://github.com/jobbole/awesome-ios-cn)
 - [Swift 学习指引](http://www.swiftguide.cn/)
+- [- ( ゜- ゜)つロ Github-iOS备忘](http://github.ibireme.com/github/list/ios/#)
