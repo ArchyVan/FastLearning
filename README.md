@@ -53,7 +53,7 @@
     * Python 开发
     * HTML、CSS、Vue 前端
     * LeanCloud 数据存储、实时通信
-* VR & DeepLearning
+* VR & AR & DeepLearning
     * 虚拟技术
     * 计算视觉
     * 机器学习
