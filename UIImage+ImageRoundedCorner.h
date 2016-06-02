@@ -3,6 +3,16 @@
 
 @interface UIImage (ImageRoundedCorner)
 
-- (UIImage *)imageAddCornerWithRadius:(CGFloat)radius andSize:(CGSize)size;
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius;
+
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor;
+
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                              corners:(UIRectCorner)corners
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor
+                       borderLineJoin:(CGLineJoin)borderLineJoin;
 
 @end
