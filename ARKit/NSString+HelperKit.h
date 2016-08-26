@@ -225,6 +225,13 @@
  */
 - (NSString *)ar_URLEncode;
 
+/**
+ *	Try to do a url decode.
+ *
+ *	@return Decoded string.
+ */
+- (NSString *)ar_URLDeCode
+
 #pragma mark - HTML
 /**
  *	Filter html tags in the string.
