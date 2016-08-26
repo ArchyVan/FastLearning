@@ -1,5 +1,5 @@
 // .h文件
-#define VASingletonH(name) + (instancetype)shared##name;
+#define ARSingletonH(name) + (instancetype)shared##name;
 
 // .m文件
 #if __has_feature(objc_arc)
@@ -37,7 +37,7 @@
 
 #else
 
-    #define VASingletonM(name) \
+    #define ARSingletonM(name) \
     static id _instace; \
  \
     + (id)allocWithZone:(struct _NSZone *)zone \
