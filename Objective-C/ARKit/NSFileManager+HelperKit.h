@@ -11,7 +11,7 @@
 @interface NSFileManager (HelperKit)
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Judge whether file at path exists and check time out or not.
  *
@@ -23,7 +23,7 @@
 - (BOOL)ar_isFileAtPath:(NSString *)filePath hasTimeOut:(NSTimeInterval)timeout;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get attributes of file at path.
  *
@@ -34,7 +34,7 @@
 - (NSDictionary *)ar_fileAttributesAtPath:(NSString *)path;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get file size at path
  *

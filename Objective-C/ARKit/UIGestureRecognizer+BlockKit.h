@@ -11,7 +11,7 @@
 
 @interface UIGestureRecognizer (BlockKit)
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Make all gestures support block callback.
  *  This will support all kinds of gestures.
@@ -19,14 +19,14 @@
 @property (nonatomic, copy) ARGestureBlock ar_onGesture;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Make tap gesture support block callback.
  */
 @property (nonatomic, copy) ARTapGestureBlock ar_onTaped;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Make long press gesture support block callback.
  */

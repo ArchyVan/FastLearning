@@ -230,7 +230,7 @@
  *
  *	@return Decoded string.
  */
-- (NSString *)ar_URLDeCode
+- (NSString *)ar_URLDeCode;
 
 #pragma mark - HTML
 /**

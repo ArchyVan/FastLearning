@@ -11,7 +11,7 @@
 @interface NSNumber (HelperKit)
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Convert NSNumber object to a string object.
  *
@@ -20,7 +20,7 @@
 - (NSString *)ar_toString;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Convert NSNumber object to a micrometer string object.
  *
