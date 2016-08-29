@@ -1,5 +1,5 @@
 //
-//  UIView+UIKit.h
+//  UIView+ARUIKit.h
 //  ARKit
 //
 //  Created by Objective-C on 16/8/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (UIKit)
+@interface UIView (ARUIKit)
 
 #pragma mark - Convenience frame api
 /**

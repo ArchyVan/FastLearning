@@ -10,8 +10,8 @@
 #define ARKit_h
 
 #import "CommonMacros.h"
-#import "UIView+UIKit.h"
-#import "UIDevice+UIKit.h"
+#import "UIView+ARUIKit.h"
+#import "UIDevice+ARUIKit.h"
 #import "UIView+BlockKit.h"
 #import "UIControl+BlockKit.h"
 #import "UIGestureRecognizer+BlockKit.h"
@@ -26,5 +26,7 @@
 #import "NSMutableArray+HelperKit.h"
 #import "NSMutableDictionary+HelperKit.h"
 #import "NSUserDefaults+HelperKit.h"
+#import "UINavigationController+ARUIKit.h"
+
 
 #endif /* ARKit_h */

@@ -1,14 +1,14 @@
 //
-//  UIView+UIKit.m
+//  UIView+ARUIKit.m
 //  ARKit
 //
 //  Created by Objective-C on 16/8/26.
 //  Copyright © 2016年 Objective-C. All rights reserved.
 //
 
-#import "UIView+UIKit.h"
+#import "UIView+ARUIKit.h"
 
-@implementation UIView (UIKit)
+@implementation UIView (ARUIKit)
 
 - (void)setAr_origin:(CGPoint)ar_origin {
     CGRect frame = self.frame;

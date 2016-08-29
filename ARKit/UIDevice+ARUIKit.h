@@ -1,5 +1,5 @@
 //
-//  UIDevice+UIKit.h
+//  UIDevice+ARUIKit.h
 //  ARKit
 //
 //  Created by Objective-C on 16/8/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIDevice (UIKit)
+@interface UIDevice (ARUIKit)
 /**
  *  Return the device platform string
  *  Example: "iPhone3,2"

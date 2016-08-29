@@ -1,12 +1,12 @@
 //
-//  UIDevice+UIKit.m
+//  UIDevice+ARUIKit.m
 //  ARKit
 //
 //  Created by Objective-C on 16/8/26.
 //  Copyright © 2016年 Objective-C. All rights reserved.
 //
 
-#import "UIDevice+UIKit.h"
+#import "UIDevice+ARUIKit.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #include <sys/socket.h>
@@ -15,7 +15,7 @@
 
 static NSString * const ARUniqueIdentifierDefaultsKey = @"ARUniqueIdentifier";
 
-@implementation UIDevice (HYBHelperKitUIKit)
+@implementation UIDevice (ARUIKit)
 
 + (NSString *)ar_devicePlatform {
     size_t size;
