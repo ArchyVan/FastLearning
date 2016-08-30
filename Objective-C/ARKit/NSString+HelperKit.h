@@ -281,4 +281,13 @@
  */
 - (BOOL)ar_isContainString:(NSString *)substring;
 
+/**
+ *  Check whether string is empty.
+ *
+ *  @param string string
+ *
+ *  @return YES if empty, otherwise NO.
+ */
++ (BOOL)ar_isEmptyString:(NSString *)string;
+
 @end
