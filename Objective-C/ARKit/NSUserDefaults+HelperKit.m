@@ -39,4 +39,12 @@
     return NO;
 }
 
+- (BOOL (^)(id, NSString *))setObjectForKey
+{
+    return ^(id value,NSString *key){
+        return [self ar_setSafeObject:value forKey:key];
+    };
+}
+
+
 @end

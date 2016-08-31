@@ -39,5 +39,18 @@
     return arr;
 }
 
+- (NSArray *(^)())reverseArray
+{
+    return ^{
+        return [self ar_reverseArray];
+    };
+}
+
+- (id (^)(NSUInteger))objectAtIndex
+{
+    return ^(NSUInteger index){
+        return [self ar_objectAtIndex:index];
+    };
+}
 
 @end

@@ -19,4 +19,9 @@
  */
 - (BOOL)ar_setSafeObject:(id)value forKey:(NSString *)key;
 
+/**
+ *  Set safe object to the user defaults, it will filter all nil or Null object.
+ */
+- (BOOL (^)(id value,NSString *key))setObjectForKey;
+
 @end

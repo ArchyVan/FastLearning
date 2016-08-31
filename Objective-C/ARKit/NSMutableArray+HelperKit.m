@@ -55,5 +55,11 @@
     return NO;
 }
 
+- (BOOL (^)(id))addObject
+{
+    return ^(id object){
+        return [self ar_addObject:object];
+    };
+}
 
 @end

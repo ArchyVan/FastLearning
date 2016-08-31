@@ -35,4 +35,14 @@
  */
 - (NSArray *)ar_reverseArray;
 
+/**
+ *  Make the array elements reverse.
+ */
+- (NSArray *(^)())reverseArray;
+
+/**
+ *  The element in the index
+ */
+- (id (^)(NSUInteger index))objectAtIndex;
+
 @end

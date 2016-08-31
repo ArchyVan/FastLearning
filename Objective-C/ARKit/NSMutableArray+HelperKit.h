@@ -49,5 +49,9 @@
 - (BOOL)ar_exchangeObjectFromIndex:(NSUInteger)fromIndex
                             toIndex:(NSUInteger)toIndex;
 
+/**
+ *  Add object to the array
+ */
+- (BOOL (^)(id object))addObject;
 
 @end
