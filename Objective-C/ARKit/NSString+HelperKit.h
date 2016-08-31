@@ -290,4 +290,10 @@
  */
 + (BOOL)ar_isEmptyString:(NSString *)string;
 
+/**
+ *  Check whether string is empty.
+ */
+- (BOOL (^)())isEmpty;
+
+
 @end

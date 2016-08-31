@@ -438,6 +438,13 @@
     return NO;
 }
 
+- (BOOL (^)())isEmpty
+{
+    return ^{
+        return [NSString ar_isEmptyString:self];
+    };
+}
+
 
 
 @end
