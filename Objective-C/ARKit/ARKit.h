@@ -26,7 +26,6 @@
 #import "NSMutableArray+HelperKit.h"
 #import "NSMutableDictionary+HelperKit.h"
 #import "NSUserDefaults+HelperKit.h"
-#import "UINavigationController+ARUIKit.h"
 
 
 #endif /* ARKit_h */
