@@ -6,10 +6,18 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Restful',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'kae2VTx0Qn-RwPVbX9h478F9BMNISJTb',
+            'cookieValidationKey' => 'rOxVP4omiSleCbo0ZzfYwExMTkUlwpKq',
+            'parsers' => [
+              'application/json' => 'yii\web\JsonParser',
+            ],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -38,21 +46,14 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'enableStrictParsing' => true,
-            'rules' => [
-            	['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
-            ],
-        ],
-
-        'request' => [
-    		'parsers' => [
-        		'application/json' => 'yii\web\JsonParser',
-    		]
-		],
+//        'urlManager' => [
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'enableStrictParsing' => true,
+//            'rules' => [
+//                ['class' => 'yii\rest\UrlRule','controller' => 'rest'],
+//            ],
+//        ],
     ],
     'params' => $params,
 ];
