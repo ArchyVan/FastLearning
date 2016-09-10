@@ -13,6 +13,7 @@
 #import "UIView+ARUIKit.h"
 #import "UIDevice+ARUIKit.h"
 #import "UIView+BlockKit.h"
+#import "UIButton+ARUIKit.h"
 #import "UIControl+BlockKit.h"
 #import "UIGestureRecognizer+BlockKit.h"
 #import "NSTimer+HelperKit.h"
