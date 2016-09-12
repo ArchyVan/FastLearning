@@ -27,7 +27,7 @@
 + (NSUInteger)ar_second:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get how many days in the year.
  *
@@ -36,7 +36,7 @@
 - (NSUInteger)ar_daysInYear;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get how many days in the specified year.
  *
@@ -47,7 +47,7 @@
 + (NSUInteger)ar_daysInYear:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Judge whether this year is leap year or not.
  *
@@ -56,7 +56,7 @@
 - (BOOL)ar_isLeapYear;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Judge whether the specified date of year is leap year or not.
  *
@@ -67,7 +67,7 @@
 + (BOOL)ar_isLeapYear:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Judge whether this year is leap year or not.
  *
@@ -78,7 +78,7 @@
 + (BOOL)ar_isLeapYearWithYear:(int)year;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get which week in the year.
  *
@@ -87,7 +87,7 @@
 - (NSUInteger)ar_weekOfYear;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get which week in the specified date.
  *
@@ -101,7 +101,7 @@
  * 获取格式化为YYYY-MM-dd格式的日期字符串
  */
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Convert the date to a time string with yyyy-MM-dd format.
  *
@@ -110,7 +110,7 @@
 - (NSString *)ar_toStringWithFormatYMD;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *  Convert the date to a time string with yyyy-MM-dd format.
  *
@@ -121,7 +121,7 @@
 + (NSString *)ar_toStringWithFormatYMD:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get how many weeks in the month. It might have 4, 5, or 6 weeks.
  *
@@ -130,7 +130,7 @@
 - (NSUInteger)ar_howManyWeeksOfMonth;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get how many weeks in the month. It might have 4, 5, or 6 weeks.
  *
@@ -141,7 +141,7 @@
 + (NSUInteger)ar_howManyWeeksOfMonth:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get the first date of this month.
  *
@@ -150,7 +150,7 @@
 - (NSDate *)ar_beginDayOfMonth;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get the first date of this month.
  *
@@ -161,7 +161,7 @@
 + (NSDate *)ar_beginDayOfMonth:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get the last date of this month.
  *
@@ -170,7 +170,7 @@
 - (NSDate *)ar_lastDayOfMonth;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get the last date of the specified month.
  *
@@ -181,7 +181,7 @@
 + (NSDate *)ar_lastDayOfMonth:(NSDate *)ar_date;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Add days
  *
@@ -192,7 +192,7 @@
 - (NSDate *)ar_dateAfterDay:(NSUInteger)days;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Add days to the specified date.
  *
@@ -204,7 +204,7 @@
 + (NSDate *)ar_dateAfterDate:(NSDate *)ar_date day:(NSInteger)days;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Add months to the date.
  *
@@ -215,7 +215,7 @@
 - (NSDate *)ar_dateAfterMonth:(NSUInteger)months;
 
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Add months to the date.
  *
@@ -230,7 +230,7 @@
  * 返回numYears年后的日期
  */
 /**
- *	@author https://github.com/CoderJackyHuang
+ *	@author Archy Van
  *
  *	Get new date offset numYears.
  *
