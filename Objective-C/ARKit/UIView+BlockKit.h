@@ -41,5 +41,8 @@
  */
 - (void)ar_addLongGestureWithCallback:(ARLongGestureBlock)onLongPressed;
 
+- (UIView *(^)(UIView *subView))addSubview;
+
+- (UIView *(^)())removeAllSubview;
 
 @end

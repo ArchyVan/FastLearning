@@ -50,4 +50,20 @@ static const void *s_ar_longGestureKey = "s_ar_longGestureKey";
 }
 
 
+- (UIView *(^)(UIView *))addSubview {
+    return ^(UIView *subView){
+        [self addSubview:subView];
+        return self;
+    };
+}
+
+- (UIView *(^)())removeAllSubview {
+    return ^{
+        for (UIView *view in self.subviews) {
+            [view removeFromSuperview];
+        }
+        return self;
+    };
+}
+
 @end
