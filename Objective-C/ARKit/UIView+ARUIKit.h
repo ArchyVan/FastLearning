@@ -76,4 +76,29 @@
  */
 @property (nonatomic, assign) CGFloat ar_bottom;
 
+/**
+ *  Get/Set the control's corneradus
+ *  Default is 0.0
+ */
+@property (nonatomic, assign) CGFloat ar_cornerRadius;
+
+/**
+ *  Get/Set the control's border color
+ *  Default is [UIColor lightGrayColor]
+ */
+@property (nonatomic, strong) UIColor *ar_borderColor;
+
+/**
+ *  Get/Set the control's border width
+ *  Default is 0.0
+ */
+@property (nonatomic, assign) CGFloat ar_borderWidth;
+
+/**
+ *  Set the control to be circle.
+ *  Default is NO.
+ */
+@property (nonatomic, assign) BOOL isCircle;
+
+
 @end
