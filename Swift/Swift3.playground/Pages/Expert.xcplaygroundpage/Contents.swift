@@ -375,3 +375,4 @@ let mauriceTheHamster = Hamster(name: "Maurice")
 let hamsters = [murrayTheHamster, morganTheHamster, mauriceTheHamster]
 
 print(hamsters.textualDescription)
+
