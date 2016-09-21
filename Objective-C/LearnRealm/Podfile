@@ -1,0 +1,10 @@
+platform :ios, ‘9.0’
+inhibit_all_warnings!
+
+target ‘LearnRealm’ do
+	pod ‘Realm’
+	target ‘LearnRealmTests’ do
+		inherit! :search_paths
+		pod ‘Realm/Headers’
+	end
+end
