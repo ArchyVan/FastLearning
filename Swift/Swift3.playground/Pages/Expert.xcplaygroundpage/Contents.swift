@@ -306,7 +306,7 @@ for object in objects {
         print("Something that doesn't have an area")
     }
 }
-
+/*-----------------------------*/
 @objc protocol CounterDataSource {
     @objc optional func increment(forCount count: Int) -> Int
     @objc optional var fixedIncrement: Int { get }
