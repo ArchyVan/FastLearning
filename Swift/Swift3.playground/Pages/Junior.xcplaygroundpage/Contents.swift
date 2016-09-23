@@ -106,6 +106,12 @@ while currentValue != 0 {
 print("Zero!")
 
 //Closure
+
+//Closure Expression Syntax
+//{ (<#parameters#>) -> <#return type#> in
+//    <#statements#>
+//}
+
 var names = ["Chris","Alex","Ewa","Barry","Daniella"]
 func backward(_ s1: String,_ s2: String) -> Bool {
     return s1 > s2

@@ -15,7 +15,7 @@ enum ASCIIControlCharacter: Character {
     case lineFeed = "\n"
     case carriageReturn = "\r"
 }
-
+//可递归枚举类型
 indirect enum ArithmeticExpression {
     case number(Int)
     case addition(ArithmeticExpression, ArithmeticExpression)
@@ -143,6 +143,7 @@ struct LevelTracker {
         return level <= highestUnlockedLevel
     }
     
+    //可以不用接受返回值
     @discardableResult
     mutating func advance(to level: Int) -> Bool {
         if LevelTracker.isUnlocked(level) {
@@ -215,6 +216,7 @@ class Food {
     init(name:String) {
         self.name = name
     }
+    //convenience 横向重写初始化方法
     convenience init() {
         self.init(name: "[Unnamed]")
     }

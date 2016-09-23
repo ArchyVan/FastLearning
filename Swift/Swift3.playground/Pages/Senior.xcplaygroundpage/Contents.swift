@@ -4,7 +4,7 @@ import Foundation
 
 var str = "Hello, playground"
 
-//ARC
+//ARC！！！
 class HTMLElement {
     
     let name: String
@@ -271,6 +271,18 @@ func allItemsMatch<C1: Container,C2: Container>(_ someContainer: C1,_ anotherCon
             }
         }
         return true
+}
+
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+
+var arrayOfStrings = ["uno","dos","tres"]
+if allItemsMatch(stackOfStrings, arrayOfStrings) {
+    print("All items match.")
+} else {
+    print("Not all items match")
 }
 
 //Advanced Operators
