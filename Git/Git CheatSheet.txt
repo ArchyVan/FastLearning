@@ -50,5 +50,6 @@ git push origin :ref/tags/<tagname> 可以删除一个远程标签
 git config --global alias.XX command 给命令配置别名
 git push origin —-delete <branchName> 删除远程分支git push origin :<branchName>
 git push origin —-delete tag <tagName> 删除远程标签git push origin :refs/tags/<tagNaem>
+git config --global core.filemode false 取消文件操作权限变更
 
 
